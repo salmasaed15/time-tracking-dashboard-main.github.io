@@ -1,0 +1,223 @@
+:root {
+    --Blue: hsl(246, 80%, 60%);
+    --orange: hsl(15, 100%, 70%);/*work*/
+    --Soft-blue: hsl(195, 74%, 62%); /*(play)*/
+    --light-red: hsl(348, 100%, 68%);/* (study)*/
+    --Lime-green: hsl(145, 58%, 55%);/*exercise*/
+    --Violet: hsl(264, 64%, 52%);/*social*/
+    --Soft-orange: hsl(43, 84%, 65%);/*self care*/
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);/*dashboard*/
+    --Pale-Blue: hsl(236, 100%, 87%);
+    }
+    
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;600&family=Overpass:wght@400;700&family=Poppins:wght@100&family=Rubik:wght@300;400;500&family=Space+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    transition: all .3s ease-in;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    background-color: var(--Very-dark-blue);
+}
+h4, h1{
+    color:#fff;
+}
+h5{
+    color:var(--Pale-Blue);
+}
+.container{
+    width: calc(250+780);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.dashboard{
+    position: relative;
+    margin-top: 55px;
+    background-color: var(--Dark-blue);
+    border-radius: 15px;
+}
+.info{
+    width: 250px;
+    height:288px;
+    background-color: var(--Blue);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: -20px;
+    /* position: absolute; */
+}
+.info img{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.info h5{
+    margin-top: 30px;
+}
+.info h1{
+    font-weight: lighter;
+    padding-top:5px ;
+}
+.stats{
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    /* margin: 0 10px 0 80px; */
+}
+.stats button{
+    display: block;
+    background: transparent;
+    color: var(--Desaturated-blue);
+    padding: 10px ;
+}
+/* .stats button:hover{
+    color: var(--Pale-Blue) ;
+    font-size: 15px;
+} */
+
+.tracks{
+    height: 400px;
+    display: grid;
+    gap: 15px 15px;
+    grid-template-columns: auto auto auto;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+.work{
+    background-color: var(--orange);
+    border-radius: 15px;
+}
+.play{
+    background-color: var(--Soft-blue);
+    border-radius: 15px;
+
+}
+.study{
+    background-color: var(--light-red);
+    border-radius: 15px;
+
+}
+.exercise {
+    background-color: var(--Lime-green);
+    border-radius: 15px;
+
+
+}
+.social{
+    background-color: var(--Violet);
+    border-radius: 15px;
+}
+.self-care{
+    background-color: var(--Soft-orange);
+    border-radius: 15px;
+}
+.info-track{
+    padding: 15px;
+    width: 250px;
+    height: 157px;
+    border-radius: 15px;
+    position: relative;
+    background-color: var(--Dark-blue);
+    cursor:pointer
+}
+.info-track:hover{
+    opacity: 0.8;
+}
+.img-icon img{
+    margin-left:170px ;
+    width: 40px;
+    height: 40px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-size: 15px;
+    font-weight:normal ;
+}
+.title img{
+    cursor: pointer;
+}
+.content{
+    margin: 5px;
+    
+}
+.content h1{
+    font-size: 40px;
+    padding-top: 20px;
+}
+.content h5{
+    padding-top: 20px;
+}
+.tab-me{
+    display: none;
+}
+button.active{
+    color: #fff ;
+}
+@media (max-width:375px) {
+    .container{
+        width: 355px;
+        flex-direction: column;
+    }
+    .dashboard{
+        margin-left: 15px;
+        margin-bottom:-27px;
+    }
+    .dashboard .info{
+        width: 325px;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .dashboard .info h5{
+        margin:20px ;
+    }
+    .dashboard .info h1{
+        font-size: 18px;
+        margin:20px ;
+    }
+    .dashboard .info img{
+        width: 70px;
+        height: 70px;
+        margin: 20px;
+    }
+    .dashboard .stats{
+        width: 325px;
+        height: 80px;
+    }
+    .stats button{
+        display: inline-block;
+        padding: 15px 25px;
+    }
+    .tracks{
+        width:325px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+
+    }
+    .img-icon img{
+        margin-left: 260px;
+    }
+    .info-track{
+        width: 325px;
+    }
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

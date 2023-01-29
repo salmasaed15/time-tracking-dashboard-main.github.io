@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <title>Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="dashboard">
+      <div class="info">
+        <img src="images/image-jeremy.png" alt="">
+        <div>
+          <h5>Report for</h5>
+          <h1>Jeremy Robson</h1>
+        </div>
+        
+      </div>
+      <div class="stats">
+        <button class="stateLink" onclick="openTrack(event, 'daily')">Daily</button>
+        <button class="stateLink"  onclick="openTrack(event, 'weekly')">Weekly</button>
+        <button class="stateLink"  onclick="openTrack(event, 'monthly')">Monthly</button>
+      </div>
+    </div>
+    <div class="tracks" id="daily">
+      <div class="work track-content" id="work">
+        <div class="img-icon">
+          <img src="images/icon-work.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Work</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>2hrs</h1>
+            <h5>Yesterday-5hrs</h5>
+          </div>
+        </div>
+        
+      </div>
+
+
+      <div class="play track-content" id="play">
+        <div class="img-icon">
+          <img src="images/icon-play.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Play</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>1hr</h1>
+            <h5>Yesterday-2hrs</h5></div>
+          </div>
+      </div>
+
+
+      <div class="study track-content" id="study">
+        <div class="img-icon">
+          <img src="images/icon-study.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Study</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>0hrs</h1>
+            <h5>lYesterday- 1hr</h5>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="exercise track-content" id="exercise">
+        <div class="img-icon">
+          <img src="images/icon-exercise.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Exercise</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>1hr</h1>
+            <h5>Yesterday-1hr</h5>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="social track-content" id="social">
+        <div class="img-icon">
+          <img src="images/icon-social.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Social</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>1hrs</h1>
+            <h5>Yesterday-3hrs</h5>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="self-care track-content" id="self-care">
+        <div class="img-icon">
+          <img src="images/icon-self-care.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Self Care</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>0hrs</h1>
+            <h5>Yesterday-1hrs</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="tracks" id="weekly">
+      <div class="work track-content" id="work">
+        <div class="img-icon">
+          <img src="images/icon-work.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Work</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>32hrs</h1>
+            <h5>last week-36hrs</h5>
+          </div>
+        </div>
+        
+      </div>
+
+
+      <div class="play track-content" id="play">
+        <div class="img-icon">
+          <img src="images/icon-play.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Play</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>10hrs</h1>
+            <h5>last week-8hrs</h5></div>
+          </div>
+      </div>
+
+
+      <div class="study track-content" id="study">
+        <div class="img-icon">
+          <img src="images/icon-study.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Study</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>4hrs</h1>
+            <h5>last week-7hrs</h5>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="exercise track-content" id="exercise">
+        <div class="img-icon">
+          <img src="images/icon-exercise.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Exercise</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>4hrs</h1>
+            <h5>last week-5hrs</h5>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="social track-content" id="social">
+        <div class="img-icon">
+          <img src="images/icon-social.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Social</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>5hrs</h1>
+            <h5>last week-10hrs</h5>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="self-care track-content" id="self-care">
+        <div class="img-icon">
+          <img src="images/icon-self-care.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Self Care</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>2hrs</h1>
+            <h5>last week-2hrs</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="tracks" id="monthly">
+      <div class="work track-content" id="work">
+        <div class="img-icon">
+          <img src="images/icon-work.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Work</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>103hrs</h1>
+            <h5>last month-128hrs</h5>
+          </div>
+        </div>
+        
+      </div>
+
+
+      <div class="play track-content" id="play">
+        <div class="img-icon">
+          <img src="images/icon-play.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Play</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>23hrs</h1>
+            <h5>last month-29hrs</h5></div>
+          </div>
+      </div>
+
+
+      <div class="study track-content" id="study">
+        <div class="img-icon">
+          <img src="images/icon-study.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Study</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>13hrs</h1>
+            <h5>last month-19hrs/h5>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="exercise track-content" id="exercise">
+        <div class="img-icon">
+          <img src="images/icon-exercise.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Exercise</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>11hrs</h1>
+            <h5>last month-18hrs</h5>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="social track-content" id="social">
+        <div class="img-icon">
+          <img src="images/icon-social.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Social</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>21hrs</h1>
+            <h5>last month-23hrs</h5>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="self-care track-content" id="self-care">
+        <div class="img-icon">
+          <img src="images/icon-self-care.svg" alt="">
+        </div>
+        <div class="info-track">
+          <div class="title">
+            <h4>Self Care</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="content">
+            <h1>7hrs</h1>
+            <h5>last month-11hrs</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Salma Saeed</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
